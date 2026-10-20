@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://if1coo5dxrm8"]
+
+[ext_resource type="Texture2D" uid="uid://dfepyg4x6vur1" path="res://salmon.png" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://rkhp5ei3y7ai" path="res://node_2d.gd" id="1_epypp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("1_0e48y")
+region = Rect2(0, 0, 1349, 438)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2a8ig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1717748846]
+script = ExtResource("1_epypp")
+
+[node name="Salmon" type="AnimatedSprite2D" parent="." unique_id=541656400]
+position = Vector2(137, 41)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_2a8ig")
